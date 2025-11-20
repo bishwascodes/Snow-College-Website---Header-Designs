@@ -1,0 +1,29 @@
+:root{
+    --blue: #1E376C;
+    --dark-blue: #1C3163;
+    --orange: #F47920;
+    --light-orange: #FAA634;
+    --white: #fff;
+}
+body{
+    background: #f2f2f2;
+}
+header{
+    nav a{
+        color: var(--white);
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap:2.5rem;
+    }
+    .top-header{
+        background-color: var(--blue);
+    }
+    .bottom-header{
+        background-color: var(--white);
+        nav a{
+            color: #000;
+        }
+    }
+}
