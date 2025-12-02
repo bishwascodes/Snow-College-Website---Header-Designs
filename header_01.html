@@ -5,59 +5,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snow College</title>
+    <!-- Adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/wkw5txy.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Custom Style -->
     <link rel="stylesheet" href="./asset/css/style_01.css">
 </head>
 
 <body>
     <header class="position-relative">
         <div class="top-header">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="left">
+            <div class="header-container position-relative">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="left w-50 justify-self-left">
                         <nav class="top-left-menu">
                             <ul>
-                                <li><a href="#">Prospective Students</a></li>
-                                <li><a href="#">Current Students</a></li>
-                                <li><a href="#">Parents</a></li>
-                                <li><a href="#">Faculty & Staff</a></li>
+                                <li class="main-nav-item">
+                                    <a href="#">Prospective Students</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Apply</h5>
+                                                <ul>
+                                                    <li><a href="#">Undergraduate</a></li>
+                                                    <li><a href="#">Graduate</a></li>
+                                                    <li><a href="#">International</a></li>
+                                                    <li><a href="#">Transfer</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Visit</h5>
+                                                <ul>
+                                                    <li><a href="#">Campus Tours</a></li>
+                                                    <li><a href="#">Virtual Tour</a></li>
+                                                    <li><a href="#">Events</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="#">Faculty & Staff</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Resources</h5>
+                                                <ul>
+                                                    <li><a href="#">HR Portal</a></li>
+                                                    <li><a href="#">Employee Directory</a></li>
+                                                    <li><a href="#">Policies</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Support</h5>
+                                                <ul>
+                                                    <li><a href="#">IT Help Desk</a></li>
+                                                    <li><a href="#">Facilities</a></li>
+                                                    <li><a href="#">Wellness</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
 
-                    <div class="right d-flex">
+                    <div class="right w-50 justify-content-end align-items-center d-flex">
                         <nav class="top-right-menu">
                             <ul>
-                                <li><a href="#">Visitors & Community</a></li>
-                                <li><a href="#">Alumni & giving</a></li>
+                                <li class="main-nav-item">
+                                    <a href="/visitors-community">Visitors & Community</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Visit</h5>
+                                                <ul>
+                                                    <li><a href="/visit/plan">Plan a Visit</a></li>
+                                                    <li><a href="/visit/maps">Campus Maps</a></li>
+                                                    <li><a href="/visit/parking">Parking & Directions</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Community</h5>
+                                                <ul>
+                                                    <li><a href="/community/programs">Community Programs</a></li>
+                                                    <li><a href="/community/events">Events</a></li>
+                                                    <li><a href="/community/facilities">Facilities Rental</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="/alumni-giving">Alumni & Giving</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Alumni</h5>
+                                                <ul>
+                                                    <li><a href="/alumni/events">Alumni Events</a></li>
+                                                    <li><a href="/alumni/magazine">Alumni Magazine</a></li>
+                                                    <li><a href="/alumni/benefits">Alumni Benefits</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Giving</h5>
+                                                <ul>
+                                                    <li><a href="/giving/donate">Give Now</a></li>
+                                                    <li><a href="/giving/ways">Ways to Give</a></li>
+                                                    <li><a href="/giving/scholarships">Scholarship Support</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
-                        <a href="#" class="btn btn-primary">My Snow</a>
+                        <a href="#" class="btn my-snow-btn">My Snow</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="bottom-header">
-            <div class="container">
-                <div class="row justify-content-between">
+            <div class="header-container position-relative">
+                <div class="bottom-header-container d-flex justify-content-between align-items-center">
                     <div class="left">
-                        <nav class="top-left-menu">
+                        <nav class="bottom-left-menu">
                             <ul>
-                                <li><a href="#">Admissions</a></li>
-                                <li><a href="#">Academics</a></li>
-                                <li><a href="#">Financial aid</a></li>
+                                <li class="main-nav-item">
+                                    <a href="#">Admissions</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Overview</h5>
+                                                <ul>
+                                                    <li><a href="#">Snow College Home</a></li>
+                                                    <li><a href="#">Admissions Home</a></li>
+                                                    <li><a href="#">Get Started</a></li>
+                                                    <li><a href="#">Contact Us</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Apply & Request</h5>
+                                                <ul>
+                                                    <li><a href="#">Request an Information Packet</a></li>
+                                                    <li><a href="#">Apply</a></li>
+                                                    <li><a href="#">College Savings Calculator</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Visit & Events</h5>
+                                                <ul>
+                                                    <li><a href="#">Campuses & Programs</a></li>
+                                                    <li><a href="#">Campus Tours</a></li>
+                                                    <li><a href="#">SnowBlast Overnighter</a></li>
+                                                    <li><a href="#">Open Houses</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Student Types & Programs</h5>
+                                                <ul>
+                                                    <li><a href="#">International Students</a></li>
+                                                    <li><a href="#">Ambassadors</a></li>
+                                                    <li><a href="#">Ambassador Program</a></li>
+                                                    <li><a href="#">Non-Traditional Students</a></li>
+                                                    <li><a href="#">Graduate From Snow</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Next Steps & Resources</h5>
+                                                <ul>
+                                                    <li><a href="#">What's Next</a></li>
+                                                    <li><a href="#">Next Steps</a></li>
+                                                    <li><a href="#">Tuition Costs</a></li>
+                                                    <li><a href="#">Financial Aid</a></li>
+                                                    <li><a href="#">Academic Advising</a></li>
+                                                    <li><a href="#">Student Jobs</a></li>
+                                                    <li><a href="#">Residency</a></li>
+                                                    <li><a href="#">Deferment / Leave of Absence</a></li>
+                                                    <li><a href="#">Consent to Release Information</a></li>
+                                                    <li><a href="#">Early Admission Consent</a></li>
+                                                    <li><a href="#">TechConnect: Frequently Asked Questions (FAQ)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="#">Academics</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Programs</h5>
+                                                <ul>
+                                                    <li><a href="#">Undergraduate Programs</a></li>
+                                                    <li><a href="#">Graduate Programs</a></li>
+                                                    <li><a href="#">Online Learning</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Resources</h5>
+                                                <ul>
+                                                    <li><a href="#">Academic Calendar</a></li>
+                                                    <li><a href="#">Library</a></li>
+                                                    <li><a href="#">Tutoring Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="#">Financial aid</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Types of Aid</h5>
+                                                <ul>
+                                                    <li><a href="#">Grants</a></li>
+                                                    <li><a href="#">Scholarships</a></li>
+                                                    <li><a href="#">Loans</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Resources</h5>
+                                                <ul>
+                                                    <li><a href="#">Financial Aid Office</a></li>
+                                                    <li><a href="#">Net Price Calculator</a></li>
+                                                    <li><a href="#">FAQs</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
 
                     </div>
-                    <div class="right">
-                        <nav class="top-left-menu">
+                    <div class="right w-50 justify-content-end align-items-center d-flex">
+                        <nav class="bottom-left-menu">
                             <ul>
-                                <li><a href="#">International</a></li>
-                                <li><a href="#">Offices</a></li>
-                                <li><a href="#">News</a></li>
+                                <li class="main-nav-item">
+                                    <a href="#">International</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Study Abroad</h5>
+                                                <ul>
+                                                    <li><a href="#">Programs</a></li>
+                                                    <li><a href="#">Application Process</a></li>
+                                                    <li><a href="#">FAQs</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Resources</h5>
+                                                <ul>
+                                                    <li><a href="#">International Student Office</a></li>
+                                                    <li><a href="#">Cultural Exchange Programs</a></li>
+                                                    <li><a href="#">Support Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="#">Offices</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Academic Offices</h5>
+                                                <ul>
+                                                    <li><a href="#">Office of the Registrar</a></li>
+                                                    <li><a href="#">Financial Aid Office</a></li>
+                                                    <li><a href="#">Admissions Office</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Student Services</h5>
+                                                <ul>
+                                                    <li><a href="#">Counseling Center</a></li>
+                                                    <li><a href="#">Career Services</a></li>
+                                                    <li><a href="#">Disability Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav-item">
+                                    <a href="#">News</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-container">
+                                            <div class="mega-menu-column">
+                                                <h5>Latest Updates</h5>
+                                                <ul>
+                                                    <li><a href="#">Campus News</a></li>
+                                                    <li><a href="#">Events</a></li>
+                                                    <li><a href="#">Announcements</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mega-menu-column">
+                                                <h5>Media</h5>
+                                                <ul>
+                                                    <li><a href="#">Photos</a></li>
+                                                    <li><a href="#">Videos</a></li>
+                                                    <li><a href="#">Social Media</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
+                        <div class="search-bar">
+                            <input type="text" name="Search" id="search" placeholder="Search Here">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,7 +328,7 @@
         <div class="central-logo">
             <a href="#">
                 <figure>
-                    <img src="./asset/img/SNOWsquareBLULogo.png" alt="Snow College Logo">
+                    <img src="./asset/img/SNOWsquareBLULogo.png" class="img-fluid" alt="Snow College Logo">
                 </figure>
             </a>
         </div>
