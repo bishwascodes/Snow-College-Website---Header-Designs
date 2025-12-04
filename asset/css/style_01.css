@@ -216,6 +216,38 @@ header {
         }
     }
 
+    .mobile-menu{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+       
+        .mobile-menu-content{
+            background: var(--dark-blue);
+             margin-left: 1rem;
+            margin-right: 1rem;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            ul{
+                justify-content: space-between;
+                li a{
+                    padding: 1rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:5px;
+                    font-size: 1.1rem;
+                }
+                .icon{
+                    display: block;
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+            };
+        }
+    }
+
 
 }
 
@@ -240,6 +272,7 @@ header {
         border-top: 1px solid var(--grey);
         .mega-menu-column a {
             color: var(--dark-blue);
+            font-weight: 600;
         }
         ul {
             display: block;
@@ -273,8 +306,6 @@ header {
     border-right: 5px solid #F47821;
     border-bottom: 3px solid #F47821;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-    figure {
-        margin-bottom: 0;
-    }
+    display: grid;
+    place-items: center;
 }
