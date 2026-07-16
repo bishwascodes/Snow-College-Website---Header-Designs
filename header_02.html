@@ -18,7 +18,7 @@
 <body>
 
     <header>
-        <div class="top-header">
+        <div class="top-header d-none d-lg-block">
             <div class="container py-3">
                 <nav>
                     <ul class="mb-0 d-flex justify-content-end align-items-center list-unstyled">
@@ -37,7 +37,14 @@
                 <div class="logo">
                     <img class="img-fluid" src="./asset/img/SNOWprimaryWHTLogo.png" alt="Snow College Logo">
                 </div>
-                <nav>
+                <nav class="main-nav" id="mainNav">
+                    <div class="mobile-nav-head d-lg-none">
+                        <span class="mobile-nav-brand">Snow College</span>
+                        <button class="mobile-nav-close" type="button" aria-label="Close menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-nav-scroll">
                     <ul class="mb-0 d-flex list-unstyled">
                         <li class="has-sub-menu"><a href="/academics">Academics</a>
                             <div class="sub-menu">
@@ -275,6 +282,18 @@
                             </div>
                         </li>
                     </ul>
+                    <ul class="mobile-utility-links list-unstyled mb-0 d-lg-none">
+                        <li><a href="#">MySnow</a></li>
+                        <li><a href="#">Canvas</a></li>
+                        <li><a href="#">Outlook</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Give to Snow</a></li>
+                    </ul>
+                    </div>
+                    <div class="mobile-nav-cta d-lg-none">
+                        <a href="#" class="snow-btn">Apply Now</a>
+                        <a href="#" class="request-info-btn">Request Info</a>
+                    </div>
                 </nav>
                 <div class="right-content d-flex align-items-center">
                     <div class="search-btn">
@@ -282,9 +301,12 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
-                    <div class="">
+                    <div class="d-none d-lg-block">
                         <a class="snow-btn" href="#">Apply Now</a>
                     </div>
+                    <button class="mobile-menu-btn d-lg-none" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -296,8 +318,9 @@
                         <input type="text" placeholder="Search programs, people, and pages...">
                     </div>
                     <div class="popular-section mt-4 align-items-center d-flex">
-                        <span>Popular: </span>
+                        
                         <ul class="list-unstyled mb-0 d-flex">
+                            <li class="heading"><span>Popular: </span></li>
                             <li><a href="#">Scholarships</a></li>
                             <li><a href="#">Class Schedule</a></li>
                             <li><a href="#">Housing</a></li>
@@ -515,20 +538,93 @@
                 }
             });
 
+            function isDesktopNav() {
+                return window.matchMedia('(min-width: 992px)').matches;
+            }
+
             document.querySelectorAll('nav ul li.has-sub-menu').forEach(function (menuItem) {
                 let closeTimeout;
+                const link = menuItem.querySelector(':scope > a');
+                const subMenu = menuItem.querySelector(':scope > .sub-menu');
 
                 menuItem.addEventListener('mouseenter', function () {
+                    if (!isDesktopNav()) return;
                     clearTimeout(closeTimeout);
                     menuItem.classList.add('active');
                 });
 
                 menuItem.addEventListener('mouseleave', function () {
+                    if (!isDesktopNav()) return;
                     closeTimeout = setTimeout(function () {
                         menuItem.classList.remove('active');
                     }, 300);
                 });
+
+                link.addEventListener('click', function (e) {
+                    if (isDesktopNav() || !subMenu) return;
+                    e.preventDefault();
+
+                    const isOpen = menuItem.classList.contains('active');
+
+                    document.querySelectorAll('nav ul li.has-sub-menu.active').forEach(function (openItem) {
+                        if (openItem !== menuItem) {
+                            openItem.classList.remove('active');
+                            const openSubMenu = openItem.querySelector(':scope > .sub-menu');
+                            if (openSubMenu) openSubMenu.style.height = '0px';
+                        }
+                    });
+
+                    if (isOpen) {
+                        menuItem.classList.remove('active');
+                        subMenu.style.height = '0px';
+                    } else {
+                        menuItem.classList.add('active');
+                        subMenu.style.height = subMenu.scrollHeight + 'px';
+                    }
+                });
             });
+
+            const mainNav = document.querySelector('.main-nav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNavClose = document.querySelector('.mobile-nav-close');
+
+            if (mainNav && mobileMenuBtn && mobileNavClose) {
+                function openMobileNav() {
+                    mainNav.classList.add('mobile-open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                    document.documentElement.classList.add('no-scroll');
+                    document.body.classList.add('no-scroll');
+                }
+
+                function closeMobileNav() {
+                    mainNav.classList.remove('mobile-open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    document.documentElement.classList.remove('no-scroll');
+                    document.body.classList.remove('no-scroll');
+                }
+
+                mobileMenuBtn.addEventListener('click', openMobileNav);
+                mobileNavClose.addEventListener('click', closeMobileNav);
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mainNav.classList.contains('mobile-open')) {
+                        closeMobileNav();
+                    }
+                });
+
+                window.addEventListener('resize', function () {
+                    if (isDesktopNav()) {
+                        if (mainNav.classList.contains('mobile-open')) {
+                            closeMobileNav();
+                        }
+                        document.querySelectorAll('nav ul li.has-sub-menu.active').forEach(function (openItem) {
+                            openItem.classList.remove('active');
+                            const openSubMenu = openItem.querySelector(':scope > .sub-menu');
+                            if (openSubMenu) openSubMenu.style.height = '';
+                        });
+                    }
+                });
+            }
 
             const headerEl = document.querySelector('header');
 
