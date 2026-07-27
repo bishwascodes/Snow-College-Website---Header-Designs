@@ -429,11 +429,11 @@ header{
                 &.has-sub-menu.active > a{
                     color: #faa634;
                 }
-                &:not(.has-sub-menu) > a::after{
+                /* &:not(.has-sub-menu) > a::after{
                     content: "\f105";
                     font-family: 'FontAwesome';
                     margin-left: 0.5rem;
-                }
+                } */
  }
 @media (max-width: 992px){
     .sidebar-handle{
