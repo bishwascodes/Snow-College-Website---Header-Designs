@@ -22,11 +22,11 @@
             <div class="container py-3">
                 <nav>
                     <ul class="mb-0 d-flex justify-content-end align-items-center list-unstyled">
-                        <li><a href="#">MySnow</a></li>
-                        <li><a href="#">Canvas</a></li>
-                        <li><a href="#">Outlook</a></li>
-                        <li><a href="#">Alumni</a></li>
-                        <li class="cta"><a href="#">Give to Snow</a></li>
+                        <li><a target="_blank" href="https://my.snow.edu">MySnow</a></li>
+                        <li><a target="_blank" href="https://snow.instructure.com/">Canvas</a></li>
+                        <li><a target="_blank" href="https://outlook.office.com/mail/">Outlook</a></li>
+                        <li><a href="/advancement/alumni/">Alumni</a></li>
+                        <li class="cta"><a href="/advancement/foundation/ways-to-give.html">Give to Snow</a></li>
                     </ul>
                 </nav>
             </div>
@@ -54,14 +54,13 @@
                                             <div class="col-md-3">
                                                 <h2>Explore Programs</h2>
                                                 <ul>
-                                                    <li><a href="#">Areas of Study <span> Browse all 130+
-                                                                programs</span></a></li>
-                                                    <li><a href="#">Degrees & Certificates <span> AA, AS, AAS, BS & more
+                                                    <li><a target="_blank" href="https://catalog.snow.edu/schools/">Academic Departments <span>Academic and Technical Schools</span></a></li>
+                                                    <li><a href="/academics/programs/">Degrees & Certificates <span> AA, AS, AAS, BS & more
                                                             </span></a></li>
-                                                    <li><a href="#">Bachelor of Music<span>Commercial Music (BM)
+                                                    <li><a href="/academics/programs/music.html">Bachelor of Music<span>Commercial Music (BM)
                                                             </span></a>
                                                     </li>
-                                                    <li><a href="#">Bachelor of Software Engineering<span>ABET Accred
+                                                    <li><a href="/academics/programs/software-engineering.html">Bachelor of Software Engineering<span>ABET Accredited
                                                             </span></a>
                                                     </li>
                                                 </ul>
@@ -69,21 +68,21 @@
                                             <div class="col-md-3">
                                                 <h2>Ways to Learn</h2>
                                                 <ul>
-                                                    <li><a href="#">Online Learning</a></li>
-                                                    <li><a href="#">Concurrent Enrollment </a></li>
-                                                    <li><a href="#">Technical Education </a></li>
-                                                    <li><a href="#">Honors Program</a></li>
-                                                    <li><a href="#">Study Abroad </a></li>
+                                                    <li><a href="/online/">Online Learning</a></li>
+                                                    <li><a href="/academics/concurrent/">Concurrent Enrollment </a></li>
+                                                    <li><a href="/admissions/techconnect.html">TechConnect </a></li>
+                                                    <li><a href="/academics/honors/">Honors Program</a></li>
+                                                    <li><a href="/international/study-abroad/">Study Abroad </a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-3">
                                                 <h2>Resources</h2>
                                                 <ul>
-                                                    <li><a href="#">Academic Catalog</a></li>
-                                                    <li><a href="#">Academic Calendar</a></li>
+                                                    <li><a href="https://catalog.snow.edu/">Academic Catalog</a></li>
+                                                    <li><a href="/offices/registrar/Academic_Calendars.html">Academic Calendar</a></li>
                                                     <li><a href="#">Class Schedule </a></li>
-                                                    <li><a href="#">Library </a></li>
-                                                    <li><a href="#">Advising &amp; Tutoring </a></li>
+                                                    <li><a href="/library">Library </a></li>
+                                                    <li><a href="/offices/advisement/tutoring.html">Tutoring </a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-3">
@@ -93,16 +92,16 @@
                                                     <p>Meet with an advisor and explore programs matched to your goals —
                                                         most students decide within their first semester.
                                                     </p>
-                                                    <a href="#" class="snow-btn">Explore areas of study</a>
+                                                    <a href="/offices/advisement/staff.html" class="snow-btn">Meet An Academic Advisor</a>
                                                 </div>
 
                                             </div>
                                         </div>
                                         <div class="bottom-links">
                                             <ul>
-                                                <li><a href="#">Faculty Directory</a></li>
-                                                <li><a href="#">Transfer Guides</a></li>
-                                                <li><a href="#">Graduation</a></li>
+                                                <li><a href="/admissions/Transfer.html">Transfer In Guides</a></li>
+                                                <li><a href="#">Transfer Out Guides</a></li>
+                                                <li><a target="_blank" href="https://catalog.snow.edu/graduation/">Graduation</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -673,16 +672,6 @@
                     }
                 });
             }
-
-            const headerEl = document.querySelector('header');
-
-            function updateHeaderHeight() {
-                if (headerEl) {
-                    document.documentElement.style.setProperty('--header-h', headerEl.offsetHeight + 'px');
-                }
-            }
-            updateHeaderHeight();
-            window.addEventListener('resize', updateHeaderHeight);
 
             const sidebarContainer = document.querySelector('.sidebar-container');
             const sidebarToggle = document.querySelector('.sidebar-toggle');
