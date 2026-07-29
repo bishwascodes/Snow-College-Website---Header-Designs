@@ -302,9 +302,13 @@ header{
                     }
                     margin-bottom: 0.75rem;
                     &:hover{
-                        background:#EEF2F7;
+                        background:#14355F;
                         padding-left: 0.5rem;
+                        padding-right: 1rem;
                         border-left-color: #F47920;
+                        a span{
+                            color:#fff;
+                        }
                     }
                     &:hover span{
                         transform: translateX(2px);
