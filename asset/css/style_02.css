@@ -306,6 +306,9 @@ header{
                         padding-left: 0.5rem;
                         padding-right: 1rem;
                         border-left-color: #F47920;
+                        a{
+                            color:#FAA63A;
+                        }
                         a span{
                             color:#fff;
                         }
@@ -494,6 +497,7 @@ header .mobile-nav-cta{
         flex: 1;
         text-align: center;
         margin: 0;
+        font-size: 0.85rem;
     }
     .request-info-btn{
         display: inline-block;
@@ -518,7 +522,6 @@ header .mobile-nav-cta{
 header ul.mb-0.d-flex.list-unstyled > li{
      > a{
         position: relative;
-        padding-bottom: 0.3rem;
      }
      &:not(.cta) > a::before{
         content: "";
