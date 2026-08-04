@@ -156,7 +156,7 @@
                                         </div>
                                         <div class="bottom-links">
                                             <ul>
-                                                <li><a href="/offices/finaid/scholarships/checklist.html">Richfield Campus</a></li>
+                                                <li><a href="/richfield/">Richfield Campus</a></li>
                                                 <li><a href="/offices/finaid/scholarships/checklist.html">Scholarship Checklist</a></li>
                                                 <li><a href="/offices/registrar/residency/index.html">Residency Info</a></li>
                                                 <li><a href="/admissions/contact_us.html">Contact Admissions</a></li>
@@ -285,8 +285,9 @@
                 </nav>
                 <div class="right-content d-flex align-items-center">
                     <div class="search-btn">
-                        <button id="search-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <button id="search-btn" aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass " aria-hidden="true"></i>
+                            <span class="sr-only">Search</span>
                         </button>
                     </div>
                     <div class="d-none d-lg-block">
@@ -718,7 +719,7 @@
             }
         
             const searchInput = document.getElementById('search-input');
-            const searchOptions = document.querySelectorAll(".search-options-ul li");
+            const searchOptions = document.querySelectorAll(".search-options-ul li:not(.heading)");
 
             searchOptions.forEach(item => {
                 item.addEventListener('click', (e) => {
